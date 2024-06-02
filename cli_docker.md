@@ -1,24 +1,16 @@
 These are notes from dockerizing a django/wagtail application utilizing a single container for the app and a seperate container for the database.
 
-# Build the Image
-## Prep
-```
-python -m pip freeze > requirements.txt
-```
-Then add back python and wagtail if removed
+# First Time
 
-## Run the Build Command
-```
-docker build -t {{app_name}} .
-```
-
-# Build the Network
+## Build the Network
 You'd probably only do this once. Note the ID that is returned. 
 ```
 docker network create {{ntw_name}}
 ```
 
-# Make the Database
+# On Cold Starts
+
+## Run the Database
 ```
 docker run --name some-postgres ^
 	--network-alias mydatabasecontainer ^
@@ -33,15 +25,44 @@ Collapsed version:
 docker run --name some-postgres --network-alias mydatabasecontainer -e POSTGRES_PASSWORD={{secret}} -e POSTGRES_DB={{db_name}} -e POSTGRES_USER={{db_user}} -d postgres --network {{ntw_name}} 
 ```
 
+# Build the App Image
 
-# Run the Container
+## Prep
 ```
-docker run --env-file ./.env --network {{ntw_name}} -p 127.0.0.1:3000:8000 {{app_name}}
+cd /{{project_directory}}
 ```
+```
+./activate.bat
+```
+My Example:
+```
+cd "OneDrive\Documents\Python\portfolio\portfolio" & "scripts/activate.bat"
+```
+### Update Requirements
+Only do if there is a requiremnets change.
+```
+python -m pip freeze > requirements.txt
+```
+Then add back python and wagtail if removed
+
+## Run the Build Command
+```
+docker build -t {{app_name}} .
+```
+My example:
+```
+docker build -t portfolioapp .
+```
+
+# Run the App Container
+```
+docker run --env-file ./.env --network {{ntw_name}} -p 8000:8000 {{app_name}}
+```
+My example:
 ``` 
-docker run --network {{ntw_name}} {{app_name}}
+docker run --env-file ./.env --network portfolio -p 8000:8000 portfolioapp
 ```
-optional -d to run in detached
+Add an optional -d to run in detached
 
 # Troubleshooting
 
@@ -59,24 +80,20 @@ docker rm <the-container-id>
 ## Issues with endpoint.sh file 
 Likely line endings. To fix in VScode, hit Ctrl + Shft + P -> Change End of Line Sequence
 
+## Run Commands Inside a Container
+```
+docker exec -it {{db_container_id}} {{the_command}} --user {{user}}
+```
+1. `docker exec` Runs a command inside the docker container
+2. `-it` keeps it open for interaction
 
-# Other Raw Notes
+### Run PSQL inside the Database Container
+```
+docker exec -it {{db_container_id}} psql --user {{db_user}} {{db_name}}
+```
+
+
+# Sources
 
 https://hub.docker.com/_/postgres
 
-
-# add -v portfolio-data:/var/lib/mysql ???
-
-docker exec -it a8d97c23b373d2a2f4198004dcfb082d3826fa9b7fa4a8c586a09184fe32710d psql --user portfolio_user portfolio
-
-docker run -dp 127.0.0.1:3000:3000 ^
-  -w /app -v "%cd%:/app" ^
-  --network portfolio ^
-  -e MYSQL_HOST=mysql ^
-  -e MYSQL_USER=root ^
-  -e MYSQL_PASSWORD=secret ^
-  -e MYSQL_DB=todos ^
-  node:18-alpine ^
-  sh -c "yarn install && yarn run dev"
-  
- docker run -p 127.0.0.1:3000:3000 -w /app -v "%cd%:/app" --network portfolio
