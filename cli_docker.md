@@ -24,6 +24,10 @@ Collapsed version:
 ```
 docker run --name some-postgres --network-alias mydatabasecontainer -e POSTGRES_PASSWORD={{secret}} -e POSTGRES_DB={{db_name}} -e POSTGRES_USER={{db_user}} -d postgres --network {{ntw_name}} 
 ```
+My example:
+```
+docker run --name portfoliodb --network portfolio --network-alias portfoliodb -e POSTGRES_PASSWORD={{PG_PW}} -e POSTGRES_DB=portfolio -e POSTGRES_USER=portfolio_user -d postgres
+```
 
 # Build the App Image
 
@@ -34,7 +38,7 @@ cd /{{project_directory}}
 ```
 ./activate.bat
 ```
-My Example:
+My example:
 ```
 cd "OneDrive\Documents\Python\portfolio\portfolio" & "scripts/activate.bat"
 ```
@@ -71,10 +75,10 @@ Add an optional -d to run in detached
 docker ps
 ```
 ```
-docker stop <the-container-id>
+docker stop {{the_container_id}}
 ```
 ```
-docker rm <the-container-id>
+docker rm {{the_container_id}}
 ```
 
 ## Issues with endpoint.sh file 
