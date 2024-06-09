@@ -1,28 +1,50 @@
-ls	cd ..	pwd	exit
-mkdir 	rmdir	nano	less
-cat	head	tail	
-md5sum filename.txt
-sha256sum filename.txt
-cp source to dest
+# Common
+`ls`	`cd ..`	`pwd`	`exit`
 
-echo “hidden text” > filename.txt:hiddenpart
-more < filename.txt:hiddenpart
- locate password #find files
-grep [searchterm] /etc/shadow #pwfile
-logger “[message]”
-cd /var/log 	#syslog
-apt-get install [programname]
-apt-get remove [programname]
-apt-get update 
-apt-get upgrade 
-apt-get clean
-apt update –y && apt upgrade –y && apt 	dist-upgrade 
+`mkdir` 	`rmdir`	`nano`	`less`
 
-adduser [username] sudo
-su 	#switch user
-id root 	#info about root
-whoami
-history 
+`cat	`head`	`tail`
+
+`md5sum filename.txt`
+
+`sha256sum filename.txt`
+
+`cp source to dest`
+
+
+`echo “hidden text” > filename.txt:hiddenpart`
+
+`more < filename.txt:hiddenpart`
+
+# locate password - find files
+`grep [searchterm] /etc/shadow` a pwfile
+
+`logger “[message]”`
+
+`cd /var/log` syslog
+
+`apt-get install [programname]`
+
+`apt-get remove [programname]`
+
+`apt-get update`
+
+`apt-get upgrade` 
+
+`apt-get clean`
+
+`apt update –y && apt upgrade –y && apt 	dist-upgrade `
+
+
+`adduser [username] sudo`
+
+`su 	#switch user`
+
+`id root 	#info about root`
+
+`whoami`
+
+`history`
 
 chmod [u (user) | g (group) | o (others) | a 	(all)] [+ | - | =] [r | w | x]
 chmod a=r #read only for all
