@@ -1,0 +1,19 @@
+# Hardening
+
+## Auto Updates
+I tried unattended-upgrade but they lock the system so it can't install or shut down for hours.
+
+## Firewall
+```
+sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw limit ssh
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw logging on
+sudo ufw enable
+```
+
+## Restrict SSH
+I tried this as well but ended up not being able to use certificates yet. Still working on it.
