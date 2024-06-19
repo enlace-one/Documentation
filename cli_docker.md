@@ -11,6 +11,7 @@ docker network create {{ntw_name}}
 # On Cold Starts
 
 ## Run the Database
+### Without a .env file
 ```
 docker run --name some-postgres ^
 	--network-alias mydatabasecontainer ^
@@ -27,6 +28,11 @@ docker run --name some-postgres --network-alias mydatabasecontainer -e POSTGRES_
 My example:
 ```
 docker run --name portfoliodb --network portfolio --network-alias portfoliodb -e POSTGRES_PASSWORD={{PG_PW}} -e POSTGRES_DB=portfolio -e POSTGRES_USER=portfolio_user -d postgres
+```
+### With a .env file
+Alternatively, you can store the database name, username, and password in a .env file. I decided on postgres.env so it would not clash with the app .env file. Here is my example:
+```
+docker run --name portfoliodb --network portfolio --network-alias portfoliodb --env-file ./postgres.env -d postgres
 ```
 
 # Build the App Image
@@ -59,6 +65,7 @@ docker build -t portfolioapp .
 ```
 
 # Run the App Container
+## If container does not exist
 ```
 docker run --env-file ./.env --network {{ntw_name}} -p 8000:8000 {{app_name}}
 ```
@@ -67,6 +74,15 @@ My example:
 docker run --env-file ./.env --network portfolio -p 8000:8000 portfolioapp
 ```
 Add an optional -d to run in detached
+## If container does exist
+Get the container name
+```
+docker ps -a
+```
+Start it 
+```
+docker start [name]
+```
 
 # Troubleshooting
 
