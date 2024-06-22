@@ -23,16 +23,16 @@ docker run --name some-postgres ^
 ```
 Collapsed version:
 ```
-docker run --name some-postgres --network-alias mydatabasecontainer -e POSTGRES_PASSWORD={{secret}} -e POSTGRES_DB={{db_name}} -e POSTGRES_USER={{db_user}} -d postgres --network {{ntw_name}} 
+docker run --name some-postgres --network-alias mydatabasecontainer -v {{local_volume}}:{{container_volume}} -e POSTGRES_PASSWORD={{secret}} -e POSTGRES_DB={{db_name}} -e POSTGRES_USER={{db_user}} -d postgres --network {{ntw_name}} 
 ```
 My example:
 ```
-docker run --name portfoliodb --network portfolio --network-alias portfoliodb -e POSTGRES_PASSWORD={{PG_PW}} -e POSTGRES_DB=portfolio -e POSTGRES_USER=portfolio_user -d postgres
+docker run --name portfoliodb --network portfolio --network-alias portfoliodb -v C:\Docker\pgdev:/var/lib/postgresql/data -e POSTGRES_PASSWORD={{PG_PW}} -e POSTGRES_DB=portfolio -e POSTGRES_USER=portfolio_user -d postgres
 ```
 ### With a .env file
 Alternatively, you can store the database name, username, and password in a .env file. I decided on postgres.env so it would not clash with the app .env file. Here is my example:
 ```
-docker run --name portfoliodb --network portfolio --network-alias portfoliodb --env-file ./postgres.env -d postgres
+docker run --name portfoliodb --network portfolio --network-alias portfoliodb -v C:\Docker\pgdev:/var/lib/postgresql/data --env-file ./postgres.env -d postgres
 ```
 
 # Build the App Image
