@@ -154,6 +154,61 @@ In the main directory, add a `.dockerignore` file.
 
 Use a template made for your app, such as python/django. 
 
+# docker-compose.yml
+You might consider docker-compose to simplify deployment. Add a `docker-compose.yml` like this
+```yml
+version: '3.8'
+
+services:
+  my-postgres:
+    image: postgres
+    container_name: portfoliodb
+    env_file: postgres.env
+    ports: 
+    - '5432:5432'
+    volumes:
+    - C:\Docker\pgdev:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: portfolioapp
+    ports:
+      - '8000:8000'
+    env_file: .env
+    volumes:
+      - .:/app # The container will use the current folder as .
+    # environment:
+    #   - DJANGO_ENV=${DJANGO_ENV}
+    depends_on:
+      - my-postgres
+    # develop:
+    #   watch:
+    #     - action: sync # Can try just sync or rebuild if needed
+    #       path: .
+    #       target: /app # ensure user can write to path (--chown)
+
+
+# volumes:
+#   pgdata: C:\Docker\pgdev
+
+
+# By default Compose sets up a single network for your app. 
+# Each container for a service joins the default network 
+# and is both reachable by other containers on that network, 
+# and discoverable by the service's name.
+```
+
+Here are the commands to build and bring up using a specific docker-compose file, you can avoid that if you only have the one. 
+
+Build:
+```
+docker-compose --file docker-compose-dev.yml build
+```
+Up (optional -d for detached):
+```
+docker-compose --file docker-compose-dev.yml up
+```
+
 # Sources
 
 https://betterstack.com/community/guides/scaling-python/dockerize-django/
