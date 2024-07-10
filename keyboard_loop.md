@@ -1,14 +1,3 @@
-## Editing
-| Shortcut   | Action                         |
-| ---------- | ------------------------------ |
-| Ctrl + Z   | Undo an action                 |
-| Ctrl + Y   | Redo an action                 |
-| Ctrl + X   | Cut the selected text or item  |
-| Ctrl + C   | Copy the selected text or item |
-| Ctrl + V   | Paste the copied or cut text   |
-| Ctrl + A   | Select all content on the page |
-| Delete     | Delete the selected text/item  |
-
 ## Formatting
 | Shortcut          | Action                    |
 | ----------------- | ------------------------- |
