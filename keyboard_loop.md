@@ -1,18 +1,3 @@
-## General Shortcuts
-| Shortcut       | Action                     |
-| -------------- | -------------------------- |
-| Ctrl + N       | Create a new workspace     |
-| Ctrl + O       | Open an existing workspace |
-| Ctrl + S       | Save the current workspace |
-| Ctrl + P       | Print the current page     |
-
-## Navigation
-| Shortcut           | Action                                   |
-| ------------------ | ---------------------------------------- |
-| Ctrl + Tab         | Switch between different pages           |
-| Ctrl + Shift + Tab | Switch between different pages (reverse) |
-| Ctrl + 1, 2, 3, ...| Navigate to specific page (numbered)     |
-
 ## Editing
 | Shortcut   | Action                         |
 | ---------- | ------------------------------ |
