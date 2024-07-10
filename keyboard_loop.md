@@ -10,8 +10,8 @@
 ## Lists and Indents
 | Shortcut           | Action                      |
 | ------------------ | --------------------------- |
-| Ctrl + Shift + L   | Toggle bullet list          |
-| Ctrl + Shift + O   | Toggle numbered list        |
+| Ctrl + 1   | Checklist          |
+| Ctrl + .   | Creae a bulleted list        |
 | Tab                | Indent the selected item    |
 | Shift + Tab        | Outdent the selected item   |
 
@@ -24,31 +24,7 @@
 | Ctrl + Alt + 4     | Insert a heading 4         |
 | Ctrl + Alt + 5     | Insert a heading 5         |
 | Ctrl + Alt + 6     | Insert a heading 6         |
-| Ctrl + Alt + T       | Insert a table             |
-| Ctrl + Alt + L       | Insert a link              |
-| Ctrl + Alt + I       | Insert an image            |
-| Ctrl + Alt + C       | Insert a code block        |
-
-## Collaboration
-| Shortcut                 | Action                     |
-| ------------------------ | -------------------------- |
 | Ctrl + Alt + M           | Add a comment              |
-| Ctrl + Alt + R           | Reply to a comment         |
-| Ctrl + Alt + E           | Resolve a comment          |
-| Ctrl + Alt + Shift + M   | Open the comment sidebar   |
 
-## Search and Replace
-| Shortcut       | Action              |
-| -------------- | ------------------- |
-| Ctrl + F       | Open the search bar |
-| Ctrl + H       | Open the replace bar|
-| F3             | Find the next instance|
-| Shift + F3     | Find the previous instance|
+## Markdown Format
 
-## Miscellaneous
-| Shortcut      | Action                          |
-| ------------- | ------------------------------- |
-| F11           | Enter or exit full-screen mode  |
-| Ctrl + T      | Open a new tab                  |
-| Ctrl + W      | Close the current tab           |
-| Alt + F4      | Close the application           |
