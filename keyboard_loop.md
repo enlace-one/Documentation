@@ -32,7 +32,6 @@
 | /     | Discover Menu        |
 | @     | Tag someone       |
 | WND + .     | Insert and Emoji       |
-| @     | Tag someone       |
 
 [Source](https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-microsoft-loop-134d4c99-d28a-4d03-a5c9-0d3000011433)
 
