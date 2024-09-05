@@ -28,9 +28,9 @@ Add search engines:
 - `:d` DuckDuckgo
 - `:g` Google
 - `:j` Jira (if applicable)
-- `vt:` for `https://www.virustotal.com/gui/search/%s`
-- `mx:` for `https://mxtoolbox.com/SuperTool.aspx?action=%s&run=toolpage`
-- `rd:` for Raindrop.io
+- `:vt` for `https://www.virustotal.com/gui/search/%s`
+- `:mx` for `https://mxtoolbox.com/SuperTool.aspx?action=%s&run=toolpage`
+- `:rd` for Raindrop.io
 
 Other options: `:is`, `:jd`
 
