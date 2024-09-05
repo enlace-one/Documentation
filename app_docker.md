@@ -198,7 +198,7 @@ services:
 # and discoverable by the service's name.
 ```
 
-Here are the commands to build and bring up using a specific docker-compose file, you can avoid that if you only have the one. 
+Here are the commands to build and bring up using a specific docker-compose file, you can avoid that if you only have the one. When you need to make migrations, just bring it down and back up. No need to rebuild. 
 
 Build:
 ```

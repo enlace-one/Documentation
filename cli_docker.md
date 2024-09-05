@@ -1,6 +1,30 @@
 These are notes from dockerizing a django/wagtail application utilizing a single container for the app and a seperate container for the database.
 
+# Common
+
+## Current Spin Up
+```
+cd "OneDrive\Documents\Python\portfolio\portfolio" & "scripts/activate.bat" & docker-compose --file docker-compose-dev.yml up
+```
+## Current Spin Down
+```
+docker-compose down
+```
+
 # Just Docker
+
+
+# Prep
+```
+cd /{{project_directory}}
+```
+```
+./activate.bat
+```
+My example:
+```
+cd "OneDrive\Documents\Python\portfolio\portfolio" & "scripts/activate.bat"
+```
 
 ## First Time
 
@@ -39,17 +63,6 @@ docker run --name portfoliodb --network portfolio --network-alias portfoliodb -v
 
 ## Build the App Image
 
-### Prep
-```
-cd /{{project_directory}}
-```
-```
-./activate.bat
-```
-My example:
-```
-cd "OneDrive\Documents\Python\portfolio\portfolio" & "scripts/activate.bat"
-```
 #### Update Requirements
 Only do if there is a requiremnets change.
 ```
