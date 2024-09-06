@@ -19,6 +19,8 @@
 # locate password - find files
 `grep [searchterm] /etc/shadow` a pwfile
 
+`find -iname "me.txt"`
+
 `logger “[message]”`
 
 `cd /var/log` syslog
