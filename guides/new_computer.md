@@ -30,6 +30,7 @@ Add search engines:
 - `:j` Jira (if applicable)
 - `:vt` for `https://www.virustotal.com/gui/search/%s`
 - `:mx` for `https://mxtoolbox.com/SuperTool.aspx?action=%s&run=toolpage`
+- `:a` for `https://www.amazon.com/s?k=%s`
 - `:rd` for Raindrop.io
 
 Other options: `:is`, `:jd`
