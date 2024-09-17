@@ -123,4 +123,10 @@ WHERE table_type = 'base table';
 EXEC sp_MSforeachtable @command1 = "PRINT '?' EXEC sp_addextendedproperty @name = N'MS_Description', @value = 'Table description here' , @level0type = N'SCHEMA', @level0name = 'dbo', @level1type = N'TABLE', @level1name = ?";
 */
 
+# Examples
+## Duplicates
+```sql
+SELECT email, count(email) FROM users GROUP BY email HAVING COUNT(email) > 1
+```
+
 Source: GitHub Copilot
