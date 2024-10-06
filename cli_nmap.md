@@ -18,7 +18,7 @@ nmap --script-help "afp-* and discovery“
 Categories: 
 discovery, dos, exploit, external, fuzzer, intrustive, safe, version, vuln, malware #detects for malware
 
-Firewall:
+# Firewall
 -sA	#See FW filtered ports
 -sN	#TCP, no flag. non-stateful firewall
 -Pn	#Skip discovery. Firewall may block discovery
