@@ -44,6 +44,20 @@ Message-ID: <1234567890@dundermifflin.com>
 
 # Advanced
 
+## Advanced - Alignment
+There are generally two types of alignment set in the DMARC record.
+
+Strict means the domains must match exactly.
+
+Relaxed includes the exact domain as well as subdomains. 
+
+
+### Advanced - Alignment - SPF
+DMARC checks if the From domain aligns with the Return-Path domain.
+
+### Advanced - Alignment - DKIM
+DMARC checks if the domain in the From domain aligns with the DKIM Signature domain.
+
 ## Advanced - Example Records
 
 ### Advanced - Records - DMARC
@@ -59,6 +73,10 @@ rua: Where aggregate reports should be sent.
 ruf: Where forensic reports should be sent.
 
 fo=1: Requests detailed forensic reports for every failed email.
+- fo=0: Generate a report only if both SPF and DKIM fail (this is the default behavior).
+- fo=1: Generate a report for every email that fails either SPF or DKIM.
+- fo=d: Generate a report if DKIM fails, regardless of SPF results.
+- fo=s: Generate a report if SPF fails, regardless of DKIM results.
 
 adkim=s: Align DKIM checks strictly with the domain in the "From" header.
 
