@@ -34,6 +34,61 @@ Message-ID: <1234567890@dundermifflin.com>
 2. The "DKIM Signature domain" is used for DKIM
 3. The "From domain" is used for
 
+# Advanced
+
+## Advanced - Example Records
+
+### Advanced - Records - DMARC
+```
+v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com; ruf=mailto:forensic-reports@example.com; fo=1; adkim=s; aspf=s; pct=100;
+```
+v=DMARC1: Specifies the DMARC version.
+
+p=reject: Instructs the receiving server to reject emails that fail DMARC.
+
+rua: Where aggregate reports should be sent.
+
+ruf: Where forensic reports should be sent.
+
+fo=1: Requests detailed forensic reports for every failed email.
+
+adkim=s: Align DKIM checks strictly with the domain in the "From" header.
+
+aspf=s: Align SPF checks strictly with the domain in the "From" header.
+
+pct=100: Apply the DMARC policy to 100% of messages.
+
+### Advanced - Records - DKIM
+```
+v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzDOjHRhvPDAF...
+```
+v=DKIM1: Specifies the DKIM version.
+
+k=rsa: Specifies the key type (RSA).
+
+p=<public key>: The public key used for verification, in Base64 format.
+
+The domain used in the Host field (default._domainkey.example.com) is a combination of:
+- default: The selector you use in your DKIM setup.
+- _domainkey: Specifies that this is a DKIM record.
+- example.com: Your domain.
+
+### Advanced - Records - SPF
+```
+v=spf1 ip4:192.0.2.0/24 ip6:2001:db8::/32 include:mailgun.org ~all
+```
+v=spf1: Specifies the SPF version.
+
+ip4:192.0.2.0/24: Authorizes this IPv4 address range to send emails.
+
+ip6:2001:db8::/32: Authorizes this IPv6 address range to send emails.
+
+include:mailgun.org: Authorizes Mailgun (third-party email service) to send emails for this domain.
+
+~all: Soft fail for any server not listed in the SPF record. Other options:
+- -all: Hard fail (reject).
+- +all: Allow any server (not recommended).
+
 # Frequently Asked Questions (FAQs)
 
 ## What happens if the SPF policy is not set but DMARC is p=quarantine or p=reject? 
