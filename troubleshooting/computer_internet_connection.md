@@ -9,3 +9,7 @@ ipconfig /release
 ipconfig /renew
 ipconfig /flushdns
 ```
+
+# Computer Connected to Wifi but Not Company Network
+
+Open user certificates and delete everything under Personal -> Certificates then wait for it to re-populate. 
