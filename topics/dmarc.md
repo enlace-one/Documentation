@@ -127,3 +127,11 @@ DMARC fails likely due to alignment.
 
 ## What does neutral DKIM mean?
 No signature in the email or the receiver did not do a lookup.
+
+## What policy does a sub-subdomain inherit? 
+It seems most internet sources say that subdomains inherit from their parent domains, however in my experience the sub-subdomains actually inherit from the organizational domain not their immediate parent domain. 
+
+Example:
+- company.org is set to `p=reject`
+- subsidiary.company.org is set to `p=quarantine`
+- Then comms.subsidiary.company.org will be set to `p=reject` according to my experience despite internet sources. 
