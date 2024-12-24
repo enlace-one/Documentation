@@ -96,12 +96,13 @@ var a = 5
 ```
 
 # Specific Subjects
-## Structs
-| Feature      | Struct               | Class               |
-|--------------|----------------------|---------------------|
-| Type         | Value type           | Reference type      |
-| Memory       | Stored on stack      | Stored on heap      |
-| Inheritance  | No inheritance       | Supports inheritance|
-| Mutability   | Must use mutating to modify | Can modify directly|
-| Use Case     | Simple, immutable objects | Complex, shared objects |
+## Structs, Classes, and Enums
+| Feature      | Struct               | Class               | Enum                |
+|--------------|----------------------|---------------------|---------------------|
+| Type         | Value type           | Reference type      | Value type          |
+| Memory       | Stored on stack      | Stored on heap      | Stored on stack     |
+| Inheritance  | No inheritance       | Supports inheritance| No inheritance      |
+| Mutability   | Must use mutating to modify | Can modify directly| Cannot modify (immutable)|
+| Use Case     | Simple, immutable objects | Complex, shared objects | Represents a fixed set of values (often used for state or choices) |
+
 
