@@ -94,3 +94,14 @@ do {
 
 var a = 5
 ```
+
+# Specific Subjects
+## Structs
+| Feature      | Struct               | Class               |
+|--------------|----------------------|---------------------|
+| Type         | Value type           | Reference type      |
+| Memory       | Stored on stack      | Stored on heap      |
+| Inheritance  | No inheritance       | Supports inheritance|
+| Mutability   | Must use mutating to modify | Can modify directly|
+| Use Case     | Simple, immutable objects | Complex, shared objects |
+
