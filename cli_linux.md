@@ -1,3 +1,7 @@
+# Top Useful Hints
+
+Use tab-complete! 
+
 # Common
 `ls`	`cd ..`	`pwd`	`exit`
 
@@ -10,7 +14,6 @@
 `sha256sum filename.txt`
 
 `cp source to dest`
-
 
 `echo “hidden text” > filename.txt:hiddenpart`
 
