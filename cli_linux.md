@@ -74,9 +74,20 @@ Use tab-complete!
 
 `top` Live view
 
-`kill`
+`kill` Add `-9` to force it.
 
 `pgrep` Filter processes
+
+`sudo ss -tulnp` Processes and connections
+
+`sudo ls -l /proc/120/exe` Find a process's full executable
+
+`sudo lsof -p 120` Find a process's open files
+
+`sudo systemctl status | grep <PID>` Find service of process id
+
+`sudo systemctl stop <service-name> && sudo systemctl disable <service-name>`
+
 
 # Sys Info
 
@@ -91,6 +102,8 @@ Use tab-complete!
 # Network
 
 `netstat` Listeners
+
+`sudo ss -tulnp` Uses a series of options to limit down. Shows processes
 
 `arp-scan 192.168.1.0/24`
 
