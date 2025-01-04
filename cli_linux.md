@@ -2,6 +2,8 @@
 
 Use tab-complete! 
 
+`sudo ufw enable` Enables uncomplicated firewall which is disabled by default in Ubuntu
+
 # Common
 `ls`	`cd ..`	`pwd`	`exit`
 
