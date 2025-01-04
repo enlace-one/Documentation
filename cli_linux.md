@@ -22,6 +22,8 @@ Use tab-complete!
 # locate password - find files
 `grep [searchterm] /etc/shadow` a pwfile
 
+`ls -l  | grep 'yyyy-mm-dd'` Find files by date modified or name
+
 `find -iname "me.txt"`
 
 `logger “[message]”`
