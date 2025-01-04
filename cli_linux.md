@@ -62,7 +62,36 @@ Use tab-complete!
 `service app_name start`
 `service app_name stop`
 
+# Files
+
+`tar` or `zip` or `gzip` Create/extract from archive
+
+`wget` download file from web
+
+# Processes
+
+`ps`
+
+`top` Live view
+
+`kill`
+
+`pgrep` Filter processes
+
+# Sys Info
+
+`df` disk usage
+
+`du` estimate file/dir size
+
+`free` memory usage
+
+`uptime` `lsusb`
+
 # Network
+
+`netstat` Listeners
+
 `arp-scan 192.168.1.0/24`
 
 `traceroute 4.4.4.4`
