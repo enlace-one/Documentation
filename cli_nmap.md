@@ -1,5 +1,7 @@
 nmap 192.168.1.1/24 	#All 256 IPs
+
 nmap example.com –p 23	#port 23
+
 nmap -oN examplescan.txt example.com 
 
 -sV	#services		-sU	#UDP
