@@ -49,14 +49,18 @@ In File Explorer:
 ## Windows - Application Configurations
 ### Windows - App Config - OneDrive
 Set up OneDrive for cloud storage. 
+## Windows - Hardening
+See [SCAP download](https://public.cyber.mil/stigs/scap/) tool to test compliance. 
 
 # Linux 
 ## Linux - Configurations
 ## Linux - Application Installs
 1. Libreoffice or similiar
 ## Linux - Application Configurations
+## Linux - Hardening
 
 # Mac
 ## Mac - Configurations
 ## Mac - Application Installs
 ## Mac - Application Configurations
+## Mac - Hardening

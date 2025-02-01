@@ -1,3 +1,9 @@
+# Top Useful Hints
+
+Use tab-complete! 
+
+`sudo ufw enable` Enables uncomplicated firewall which is disabled by default in Ubuntu
+
 # Common
 `ls`	`cd ..`	`pwd`	`exit`
 
@@ -11,13 +17,14 @@
 
 `cp source to dest`
 
-
 `echo “hidden text” > filename.txt:hiddenpart`
 
 `more < filename.txt:hiddenpart`
 
 # locate password - find files
 `grep [searchterm] /etc/shadow` a pwfile
+
+`ls -l  | grep 'yyyy-mm-dd'` Find files by date modified or name
 
 `find -iname "me.txt"`
 
@@ -55,7 +62,49 @@
 `service app_name start`
 `service app_name stop`
 
+# Files
+
+`tar` or `zip` or `gzip` Create/extract from archive
+
+`wget` download file from web
+
+# Processes
+
+`ps`
+
+`top` Live view
+
+`kill` Add `-9` to force it.
+
+`pgrep` Filter processes
+
+`sudo ss -tulnp` Processes and connections
+
+`sudo ls -l /proc/120/exe` Find a process's full executable
+
+`sudo lsof -p 120` Find a process's open files
+
+`sudo systemctl status | grep <PID>` Find service of process id
+
+`sudo systemctl stop <service-name> && sudo systemctl disable <service-name>`
+
+
+# Sys Info
+
+`df` disk usage
+
+`du` estimate file/dir size
+
+`free` memory usage
+
+`uptime` `lsusb`
+
 # Network
+
+`netstat` Listeners
+
+`sudo ss -tulnp` Uses a series of options to limit down. Shows processes
+
 `arp-scan 192.168.1.0/24`
 
 `traceroute 4.4.4.4`
@@ -97,4 +146,89 @@
 `ifconfig eth0 0.0.0.0 up `
 
 `ifconfig eth0 1.1.1.1 netmask 255.255.255.0` #Sets IP 
+
+# Vim Cheat Sheet
+
+## Basics
+- `vim <filename>`: Open a file in Vim.
+- `:q`: Quit Vim.
+- `:q!`: Quit without saving changes.
+- `:w`: Save the current file.
+- `:wq`: Save and quit.
+- `:x`: Save and quit (same as `:wq`).
+- `u`: Undo the last change.
+- `Ctrl + r`: Redo the last undone change.
+
+---
+
+## Modes
+- **Normal mode**: Default mode for navigation and commands.
+- **Insert mode**: Enter text (`i`, `I`, `a`, `A`, `o`, `O` to enter).
+- **Visual mode**: Select text (`v` for character-wise, `V` for line-wise, `Ctrl + v` for block).
+- **Command mode**: Execute commands (type `:` to enter).
+
+---
+
+## Navigation
+- `h`: Move left.
+- `l`: Move right.
+- `j`: Move down.
+- `k`: Move up.
+- `0`: Move to the beginning of the line.
+- `^`: Move to the first non-whitespace character of the line.
+- `$`: Move to the end of the line.
+- `w`: Jump to the beginning of the next word.
+- `e`: Jump to the end of the current/next word.
+- `b`: Jump to the beginning of the previous word.
+- `gg`: Go to the beginning of the file.
+- `G`: Go to the end of the file.
+- `:n`: Go to line number `n`.
+
+---
+
+## Editing
+- `x`: Delete the character under the cursor.
+- `X`: Delete the character before the cursor.
+- `dd`: Delete the current line.
+- `yy`: Copy (yank) the current line.
+- `p`: Paste after the cursor.
+- `P`: Paste before the cursor.
+- `r<character>`: Replace the character under the cursor.
+- `cw`: Change the word under the cursor.
+
+---
+
+## Search and Replace
+- `/text`: Search for `text` forward.
+- `?text`: Search for `text` backward.
+- `n`: Repeat the last search in the same direction.
+- `N`: Repeat the last search in the opposite direction.
+- `:%s/old/new/g`: Replace all occurrences of `old` with `new` in the file.
+
+---
+
+## Visual Mode
+- `v`: Start visual mode (character-wise selection).
+- `V`: Start visual mode (line-wise selection).
+- `Ctrl + v`: Start visual mode (block selection).
+- `d`: Delete selected text.
+- `y`: Yank (copy) selected text.
+- `>`, `<`: Indent or un-indent selected text.
+
+---
+
+## Advanced
+- `:!<command>`: Run a shell command.
+- `:set nu`: Show line numbers.
+- `:set nonu`: Hide line numbers.
+- `:split <filename>`: Split the window horizontally.
+- `:vsplit <filename>`: Split the window vertically.
+- `Ctrl + w + w`: Switch between windows.
+
+---
+
+## Exiting Split Windows
+- `:q`: Close the current split.
+- `:qa`: Quit all windows.
+
 
