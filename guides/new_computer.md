@@ -33,6 +33,7 @@ Add search engines:
 - `:a` for `https://www.amazon.com/s?k=%s`
 - `:c` for `{{confluence}}/dosearchsite.action?cql=siteSearch+~+%22%s%22+and+space+%3D+%22AO%22&queryString=%s`
 - `:rd` for Raindrop.io
+- `:l` for Microsoft Lists (if applicable) 
 
 Other options: `:is`, `:jd`, `:jt`
 
