@@ -69,3 +69,4 @@
 
 # Launch Applications
 `optionalfeatures`
+`wf.msc.` #Windows Firewall
