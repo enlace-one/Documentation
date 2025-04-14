@@ -69,4 +69,7 @@
 
 # Launch Applications
 `optionalfeatures`
-`wf.msc.` #Windows Firewall
+
+`wf.msc.` # Windows Firewall
+
+`eventvwr` # Event Viewer
