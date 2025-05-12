@@ -73,3 +73,9 @@
 `wf.msc.` # Windows Firewall
 
 `eventvwr` # Event Viewer
+
+# Take Actions from Terminal 
+
+`winget list`
+
+`winget uninstall --name "app name"`
