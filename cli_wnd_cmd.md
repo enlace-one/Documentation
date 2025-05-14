@@ -76,6 +76,6 @@
 
 # Take Actions from Terminal 
 
-`winget list`
+`winget list | find /i "app"`
 
 `winget uninstall --name "app name"`
