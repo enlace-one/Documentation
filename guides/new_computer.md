@@ -41,7 +41,8 @@ Add search engines:
 - `:rd` for Raindrop.io
 - `:l` for Microsoft Lists (if applicable)
 - `:talos` for  `https://talosintelligence.com/reputation_center/lookup?search=%s`
-- `:whois` for ``
+- `:whois` for `https://www.whois.com/whois/%s`
+- `:ip` for `https://ipinfo.io/%s?lookup_source=search-bar`
 
 Other options: `:is`, `:jd`, `:jt`
 
