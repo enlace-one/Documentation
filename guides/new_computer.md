@@ -1,4 +1,4 @@
-<img width="950" height="488" alt="image" src="https://github.com/user-attachments/assets/c12943ff-7371-4f21-9610-a1ec73bcca5f" /># Any New Computer
+# Any New Computer
 
 ## Any - Configurations
 1. Change display size to 125% (opt)
