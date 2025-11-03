@@ -1,4 +1,4 @@
-# Any New Computer
+<img width="950" height="488" alt="image" src="https://github.com/user-attachments/assets/c12943ff-7371-4f21-9610-a1ec73bcca5f" /># Any New Computer
 
 ## Any - Configurations
 1. Change display size to 125% (opt)
@@ -42,6 +42,7 @@ Add search engines:
 - `:l` for Microsoft Lists (if applicable)
 - `:talos` for  `https://talosintelligence.com/reputation_center/lookup?search=%s`
 - `:whois` for `https://www.whois.com/whois/%s`
+- `:whois2` for `https://whois.domaintools.com/%s`
 - `:ip` for `https://ipinfo.io/%s?lookup_source=search-bar`
 
 Other options: `:is`, `:jd`, `:jt`
