@@ -1,3 +1,5 @@
+# See Confluence page! 
+
 # Any New Computer
 ## Any - Configurations
 1. Change display size to 125% (opt)

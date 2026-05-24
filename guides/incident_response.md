@@ -9,4 +9,4 @@ Disconnect it from the network
 #### FIM Check 
 Run the below to use the System File Checker. It will take some time.
 
-`sfc / scannow`
+`sfc /scannow`
