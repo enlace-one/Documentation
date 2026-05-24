@@ -1,9 +1,12 @@
 # See Confluence page! 
 
 # Any New Computer
+
 ## Any - Configurations
 1. Change display size to 125% (opt)
 2. Harden security settings
+
+
 ## Any - Application Installs
 1. Brave
 2. Chrome
@@ -15,9 +18,12 @@
 8. .git
 9. NMAP
 10. Proton VPN
+
 ## Any - Application Configurations
+
 ### Any - App Config - Burp
 See the burp suite documentation. 
+
 ### Any - App Config - Browsers 
 Add extensions:
 - Raindrop.io
@@ -35,6 +41,11 @@ Add search engines:
 - `:a` for `https://www.amazon.com/s?k=%s`
 - `:c` for `{{confluence}}/dosearchsite.action?cql=siteSearch+~+%22%s%22+and+space+%3D+%22AO%22&queryString=%s`
 - `:rd` for Raindrop.io
+- `:l` for Microsoft Lists (if applicable)
+- `:talos` for  `https://talosintelligence.com/reputation_center/lookup?search=%s`
+- `:whois` for `https://www.whois.com/whois/%s`
+- `:whois2` for `https://whois.domaintools.com/%s`
+- `:ip` for `https://ipinfo.io/%s?lookup_source=search-bar`
 
 Other options: `:is`, `:jd`, `:jt`
 

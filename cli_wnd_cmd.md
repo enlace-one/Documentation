@@ -69,3 +69,13 @@
 
 # Launch Applications
 `optionalfeatures`
+
+`wf.msc.` # Windows Firewall
+
+`eventvwr` # Event Viewer
+
+# Take Actions from Terminal 
+
+`winget list | find /i "app"`
+
+`winget uninstall --name "app name"`

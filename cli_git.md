@@ -1,19 +1,19 @@
-git init –b localreponame
+`git init –b localreponame`
 
-git remote add remotename [linktorepo]
+`git remote add remotename [linktorepo]`
 
-git clone -b <branch> <remote_repo>
+`git clone -b <branch> <remote_repo>`
 
-git branch –a
+`git branch –a`
 
-git status 
+`git status `
 
-git add
+`git add`
 
-Git reset
+`Git reset`
 
-git commit -m "test commit"
+`git commit -m "test commit"`
 
-git push remotename localreponame
+`git push remotename localreponame`
 
-git pull
+`git pull`
